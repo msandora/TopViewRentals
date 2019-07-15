@@ -1,0 +1,100 @@
+<div class="col-md-4">
+    <div class="card">
+      <img class="card-img-top"src="${product.image}" alt="">
+  
+      <div class="card-body">
+        <h4 class="card-title">${product.name}</h4>
+        <p class="card-text">${product.product_type}</p>
+        <p class="card-text">${product.id}</p>
+        <p class="card-text">${product.id}</p>
+        <p class="card-text price">${product.price}</p>           
+        <a href="#" class="btn btn-outline-secondary" data-toggle="modal" data-target="#model_${product.id}" onclick="processRental(${product.id}, ${product.price});">Rent this item</a>
+      </div>
+    </div>
+  </div>
+
+
+
+  
+  <form class="needs-validation" novalidate>
+      <div class="form-row">
+        <div class="col-md-4 mb-3">
+          <label for="validationCustom01" class="col-form-label-sm">First name</label>
+          <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <label for="validationCustom02" class="col-form-label-sm">Last name</label>
+          <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+        <label for="inputEmail4" class="col-form-label-sm">Email</label>
+        <div class="input-group">
+            <input type="email" class="form-control" id="validationCustom03" placeholder="Email" required>
+            <div class="invalid-feedback">
+              Please enter your email.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+          <label class="form-check-label" for="invalidCheck">
+            Agree to terms and conditions
+          </label>
+          <div class="invalid-feedback">
+            You must agree before submitting.
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-primary" type="submit">Submit form</button>
+    </form>
+
+        <form class="needs-validation" action="">
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="validationCustom01">First name</label>
+              <input type="text" class="form-control" placeholder="First name">
+            </div>
+            <div class="form-group col-md-6">
+            <label for="validationCustom02">Last name</label>
+              <input type="text" class="form-control" placeholder="Last name">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-12">
+              <label for="inputEmail4" class="col-form-label-sm">Email</label>
+              <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+            </div>
+          </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-12">
+
+          <div id="pickup_date">
+          
+            <label class="form col-form-label-sm">Pickup Date:</label>
+            <input type="date" class="textbox form-control" id="pick_date_${product.id}" name="pickup_date" onchange="cal(${product.id});GetTotal(${product.price})"/>
+          </div>
+          <div id="dropoff_date">
+            <label class="form col-form-label-sm">Dropoff Date:</label>
+            <input type="date" class="textbox form-control" id="drop_date_${product.id}" name="dropoff_date" onchange="cal(${product.id});GetTotal(${product.price})"/>
+          </div>
+          <div id="numdays">
+            <p><label class="form">Number of days:</label></p>
+            <input type="text" class="textbox form-control" id="numdays_${product.id}" name="numdays" disabled/>
+          </div>
+          <p>Total Amount in $ </p>
+          <input class="form-control" size=12 type="text" name="total" id="total_${product.id}" disabled>
+          </div>
+          </div>
+
+
+        </form>
