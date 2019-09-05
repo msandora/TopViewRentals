@@ -1,2 +1,3 @@
 # TopViewRentals
-Stack: Bootstrap/JQuery
+Stack: Bootstrap/Javascript
+Live: https://marksandora.github.io/TopViewRentals/
